@@ -117,9 +117,9 @@ add(ll, 5)
 add(ll, [6, 7, 8])
 
 # print all nodes
-printList(ll)
+printList(ll)  # 1 -> 2 -> 3 -> 4 -> 5 -> 7 -> 8
 
 # remove node with value 2
 remove(ll, 2)
-printList(ll)
+printList(ll)  # 1 -> 3 -> 4 -> 5 -> 7 -> 8
 

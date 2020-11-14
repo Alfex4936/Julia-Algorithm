@@ -1,3 +1,6 @@
+include("./utils.jl")
+using .utils
+
 function countSort(A::AbstractVector)
 	min_ = minimum(A)
 	max_ = maximum(A) - min_
@@ -25,18 +28,8 @@ function countSort(A::AbstractVector)
 	return A
 end
 
-# isSorted
-function 🚨(A::AbstractVector)
-	for i = 1:length(A) - 1
-		if A[i] > A[i + 1]
-			return false
-		end
-	end
-	return true
-end
- 
 println("countSort")
-arr = [rand(-10000:10000) for _ = 1:10000]
+arr = genRandomArray(10000)
 # for i = 1:10000
 #     push!(arr, rand(-10000:10000))
 # end

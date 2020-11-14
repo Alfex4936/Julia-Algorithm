@@ -1,3 +1,6 @@
+include("./utils.jl")
+using .utils
+
 function quickSort(A::AbstractVector, lo::Integer, hi::Integer)
 	while hi > lo
 		p = partition(A, lo, hi)
@@ -8,7 +11,7 @@ function quickSort(A::AbstractVector, lo::Integer, hi::Integer)
 end
 
 function partition(A::AbstractVector, lo::Integer, hi::Integer)
-	pivot = A[(lo+hi)÷2]
+	pivot = A[(lo + hi) ÷ 2]
 	# ÷ integer divide like //
 	i = lo - 1
 	j = hi + 1
@@ -29,19 +32,9 @@ function partition(A::AbstractVector, lo::Integer, hi::Integer)
 		A[i], A[j] = A[j], A[i]
 	end
 end
-
-# isSorted
-function 🚨(A::AbstractVector)
-	for i = 1:length(A) - 1
-		if A[i] > A[i + 1]
-			return false
-		end
-	end
-	return true
-end
  
 println("quickSort")
-arr = [rand(-10000:10000) for _ = 1:10000]
+arr = genRandomArray(10000)
 # for i = 1:10000
 #     push!(arr, rand(-10000:10000))
 # end

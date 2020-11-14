@@ -56,6 +56,7 @@ end
 function add(ll::LinkedList, nodes::Array)
     if !isdefined(ll, :head)
         ll.head = Node(nodes[1])  # first index is 1
+        node = node[2:length(nodes)]
     end
 
     head = ll.head
@@ -63,7 +64,7 @@ function add(ll::LinkedList, nodes::Array)
         head = head.next
     end
 
-    for node in nodes[2:length(nodes)]
+    for node in nodes
         head.next = Node(node)
         head = head.next
     end
@@ -117,9 +118,9 @@ add(ll, 5)
 add(ll, [6, 7, 8])
 
 # print all nodes
-printList(ll)  # 1 -> 2 -> 3 -> 4 -> 5 -> 7 -> 8
+printList(ll)  # 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 # remove node with value 2
 remove(ll, 2)
-printList(ll)  # 1 -> 3 -> 4 -> 5 -> 7 -> 8
+printList(ll)  # 1 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 

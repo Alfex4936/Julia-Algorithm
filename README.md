@@ -19,5 +19,11 @@
     * [Insertion Sort](https://github.com/Alfex4936/Julia-Algorithm/blob/main/sorting/insertSort.jl)
     * [Quick Sort](https://github.com/Alfex4936/Julia-Algorithm/blob/main/sorting/quickSort.jl)
     * [Selection Sort](https://github.com/Alfex4936/Julia-Algorithm/blob/main/sorting/selectionSort.jl)
-</td></tr>
+</td>
+
+* Data structures
+    * [Singly Linked List](https://github.com/Alfex4936/Julia-Algorithm/blob/main/data/singly_linked_list.jl)
+</td>
+
+</tr>
 </table>
